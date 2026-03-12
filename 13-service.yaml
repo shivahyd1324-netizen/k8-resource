@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector: 
+    project: roboshop
+    component: frontend
+    environment: Dev
+  ports:
+    - protocol: Tcp
+      port: 80   #  serviceport
+      targetport: 80 # containerport     
